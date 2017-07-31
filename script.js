@@ -5,9 +5,7 @@ $(document).ready(function() {
 var count = 0;
 //
 
-$('#delete').click(function(){
-  $(this).remove();
-});
+
 
   $('#generate').click(function(){
     count = count + 1;
@@ -17,6 +15,8 @@ $('#delete').click(function(){
 
   });
 
-
+  $('#delete').click(function(){
+    $(this).parent().remove();
+  });
 
 });
