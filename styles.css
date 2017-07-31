@@ -1,4 +1,6 @@
-.container {
+#pHere {
   background-color: red;
-
+  height: 50px;
+  width: auto;
+  margin: 10px;
 }

@@ -2,13 +2,21 @@ console.log("sourced");
 
 $(document).ready(function() {
 
-  //listeners
-
 var count = 0;
+//
+
+$('#delete').click(function(){
+  $(this).remove();
+});
 
   $('#generate').click(function(){
-    $('#appended').append('<div id="pHere">' + '<p>Count Clicks</p>' + '</div>');
+    count = count + 1;
+    $('#appended').append('<div id="pHere"></div>');
+    $('#pHere').append('<p id="paragraph">' + count + '</p>');
+    $('#pHere').append('<button id="swap">Swap</button>' + '<button id="delete">Delete</button>');
 
   });
-  $('#pHere').append('<button>Swap</button>' + '<button>Delete</button>');
+
+
+
 });
