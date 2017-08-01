@@ -1,6 +1,6 @@
-#pHere {
-  background-color: red;
+.red {
   height: 50px;
   width: auto;
-  margin: 10px;
+  background-color: red;
+
 }

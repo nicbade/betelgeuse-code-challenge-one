@@ -1,22 +1,21 @@
-console.log("sourced");
+console.log('Javascript sourced');
 
-$(document).ready(function() {
+$(document).ready(function(){
 
 var count = 0;
-//
-
-
-
-  $('#generate').click(function(){
-    count = count + 1;
-    $('#appended').append('<div id="pHere"></div>');
-    $('#pHere').append('<p id="paragraph">' + count + '</p>');
-    $('#pHere').append('<button id="swap">Swap</button>' + '<button id="delete">Delete</button>');
-
+  $('#generate').on('click' , function(){
+    count++;
+    $('#container').append('<div class="red">'+
+    '<p>' + count +'</p>'+
+    '<button class="swap">Swap</button>'+'<button class="delete">Delete</button>'+'</div>');
   });
 
-  $('#delete').click(function(){
+  $('#container').on('click' , '.delete', function(){
     $(this).parent().remove();
   });
 
+  $('#container').on('click', '.swap', function(){
+    $(this).parent().closest('div').css('color', 'yellow');
+
+  });
 });
