@@ -15,7 +15,8 @@ var count = 0;
   });
 
   $('#container').on('click', '.swap', function(){
-    $(this).parent().closest('div').css('color', 'yellow');
+    $(this).parent().css('background-color', 'yellow');
+    $(this).parent().css('background-color', 'red');
 
   });
 });
